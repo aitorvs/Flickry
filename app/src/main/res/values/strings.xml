@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name" translatable="false">Flickry</string>
+    <string name="search">Search…</string>
+    <string name="the_image_description">the image description</string>
+</resources>

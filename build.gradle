@@ -1,0 +1,45 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0-beta7'
+//        classpath 'com.android.tools.build:gradle:2.3.3'
+
+        // retrolambda
+        classpath 'me.tatarka:gradle-retrolambda:3.6.1'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext.compileSdkVersion = 26
+ext.buildToolsVersion = "26.0.2"
+ext.supportLibraryVersion = "26.1.0"
+ext.minSdkVersion = 16
+ext.targetSdkVersion = 25
+ext.constraint_layout_version = "1.0.2"
+ext.espresso_version = "3.0.0"
+ext.android_test_support_library_version = "1.0.0"
+
+ext.ci = 'true'.equals(System.getenv('CI'))
+
+// Load dependencies
+apply from: 'libraries.gradle'

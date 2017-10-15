@@ -1,0 +1,87 @@
+ext {
+    firebaseVersion = '10.2.6'
+    rx_java_version = '2.1.3'
+    rx_relay_version = '2.0.0'
+    rx_binding_version = '2.0.0'
+    rx_android_version = '2.0.1'
+    retrofit2_version = '2.3.0'
+    rx_preferences_version = '2.0.0-RC3'
+    store_version = '3.0.0-beta'
+    deps =[
+            // Auto value
+            googleAutoValue             :       "com.google.auto.value:auto-value:1.3",
+            googleAutoValueApt          :       "com.google.auto.value:auto-value:1.3",
+            autoValueParcelExtApt       :       "com.ryanharter.auto.value:auto-value-parcel:0.2.5",
+            autoValueParcelExtAdapter   :       "com.ryanharter.auto.value:auto-value-parcel-adapter:0.2.5",
+            autoValueGsonExt            :       "com.ryanharter.auto.value:auto-value-gson:0.4.4",
+            autoValueGsonExtApt         :       "com.ryanharter.auto.value:auto-value-gson:0.4.4",
+            gson                        :       "com.google.code.gson:gson:2.8.0",
+            autoValueMoshiApt           :       "com.ryanharter.auto.value:auto-value-moshi:0.4.4",
+            autoValueMoshiAnnotations   :       "com.ryanharter.auto.value:auto-value-moshi-annotations:0.4.4",
+
+            // Dagger
+            dagger2                     :       "com.google.dagger:dagger:2.11",
+            dagger2Apt                  :       "com.google.dagger:dagger-compiler:2.11",
+
+            // StickyHeaders
+            stickyListHeaders           :       "se.emilsjolander:stickylistheaders:2.7.0",
+            stickyHeadersRecyclerView   :       "com.timehop.stickyheadersrecyclerview:library:0.4.3@aar",
+
+            // Butter knife
+            butterKnife                 :       "com.jakewharton:butterknife:8.5.1",
+            butterKnifeApt              :       "com.jakewharton:butterknife-compiler:8.5.1",
+
+            // Material dialogs
+            materialDialogs             :       "com.afollestad.material-dialogs:core:0.9.4.5",
+
+            // Rx Java
+            rxAndroid                   :       "io.reactivex.rxjava2:rxandroid:$rx_android_version",
+            rxJava                      :       "io.reactivex.rxjava2:rxjava:$rx_java_version",
+            rxPreferences               :       "com.f2prateek.rx.preferences2:rx-preferences:$rx_preferences_version",
+            rxRelay                     :       "com.jakewharton.rxrelay2:rxrelay:$rx_relay_version",
+
+            // Rx bindings
+            rxBinding                   :       "com.jakewharton.rxbinding2:rxbinding:$rx_binding_version",
+            rxBindingSupport            :       "com.jakewharton.rxbinding2:rxbinding-support-v4:$rx_binding_version",
+            rxBindingAppCompat          :       "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:$rx_binding_version",
+            rxBindingDesign             :       "com.jakewharton.rxbinding2:rxbinding-design:$rx_binding_version",
+            rxBindingRecyclerView       :       "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:$rx_binding_version",
+            rxBindingLeanback           :       "com.jakewharton.rxbinding2:rxbinding-leanback-v17:$rx_binding_version",
+
+            threetenabp                 :       "com.jakewharton.threetenabp:threetenabp:1.0.5",
+
+            retrofit2                   :       "com.squareup.retrofit2:retrofit:$retrofit2_version",
+            retrofit2AdapterRxJava      :       "com.squareup.retrofit2:adapter-rxjava2:$retrofit2_version",
+            retrofit2ConverterMoshi     :       "com.squareup.retrofit2:converter-moshi:$retrofit2_version",
+            retrofit2Mock               :       "com.squareup.retrofit2:retrofit-mock:$retrofit2_version",
+            moshi                       :       "com.squareup.moshi:moshi:1.3.1",
+            okhttp3                     :       "com.squareup.okhttp3:okhttp:3.6.0",
+            okhttp3LoggingInterceptor   :       "com.squareup.okhttp3:logging-interceptor:3.6.0",
+
+            // Telescope
+            telescope                   :       "com.mattprecious.telescope:telescope:1.5.0@aar",
+
+            // Process phoenix
+            processPhoenix              :       "com.jakewharton:process-phoenix:1.0.2",
+
+            // Stetho
+            stetho                      :       "com.facebook.stetho:stetho:1.5.0",
+
+            // TImber logging library
+            timber                      :       "com.jakewharton.timber:timber:4.5.1",
+
+            // Firebase
+            firebaseMessaging           :       "com.google.firebase:firebase-messaging:$firebaseVersion",
+            firebaseConfig              :       "com.google.firebase:firebase-config:$firebaseVersion",
+
+            // Permission dispatches - handle M permissions with annotations and reflection free
+            permissionDispatcher        :       "com.github.hotchemi:permissionsdispatcher:2.4.0",
+            permissionDispatcherApt     :       "com.github.hotchemi:permissionsdispatcher-processor:2.4.0",
+
+            // NY time store
+            store3                       :      "com.nytimes.android:store3:$store_version",
+
+            phrase                       :      "com.squareup.phrase:phrase:1.1.0",
+            picasso                      :      "com.squareup.picasso:picasso:2.5.2",
+    ]
+}

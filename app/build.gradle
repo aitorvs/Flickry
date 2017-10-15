@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+    defaultConfig {
+        applicationId "com.example.aitor.flickry"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', 'API_KEY', "\"${flickr_api_key}\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+
+    // Network dependencies
+    implementation deps.retrofit2
+    implementation deps.retrofit2AdapterRxJava
+    implementation deps.retrofit2ConverterMoshi
+    implementation deps.retrofit2Mock
+    implementation deps.okhttp3
+    implementation deps.moshi
+
+    // Autovalue
+    implementation deps.googleAutoValue
+    annotationProcessor deps.googleAutoValueApt
+    implementation deps.autoValueParcelExtAdapter
+    annotationProcessor deps.autoValueParcelExtApt
+    annotationProcessor deps.autoValueMoshiApt
+    compileOnly deps.autoValueMoshiAnnotations
+
+    implementation deps.gson
+
+
+    // Rx dependencies
+    implementation deps.rxAndroid
+    implementation deps.rxJava
+    implementation deps.rxRelay
+
+    // DI
+    implementation deps.butterKnife
+    annotationProcessor deps.butterKnifeApt
+    implementation deps.dagger2
+    annotationProcessor deps.dagger2Apt
+
+    // Others
+    implementation deps.store3
+    implementation deps.phrase
+    implementation deps.picasso
+
+    // debugging
+    implementation deps.timber
+    implementation deps.stetho
+
+    // testing
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:$espresso_version", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+}
