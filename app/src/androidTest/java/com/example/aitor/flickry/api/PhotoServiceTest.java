@@ -44,7 +44,7 @@ public class PhotoServiceTest {
         assertTrue(photos.total() > 0);
         assertTrue("page != 1",photos.page() == 1);
         // FIXME the value 200 is hardcoded and should be fixed in the future
-        assertTrue("perpage != 200",photos.perPage() == 200);
+        assertTrue("perpage != 20",photos.perPage() == 20);
     }
 
     @Test
